@@ -1,0 +1,34 @@
+{
+  "name": "test",
+  "ogmoVersion": "3.4.0",
+  "levelPaths": ["."],
+  "backgroundColor": "#282c34ff",
+  "gridColor": "#3c4049cc",
+  "anglesRadians": true,
+  "directoryDepth": 5,
+  "layerGridDefaultSize": {"x": 8, "y": 8},
+  "levelDefaultSize": {"x": 320, "y": 240},
+  "levelMinSize": {"x": 128, "y": 128},
+  "levelMaxSize": {"x": 4096, "y": 4096},
+  "levelValues": [],
+  "defaultExportMode": ".json",
+  "compactExport": false,
+  "externalScript": "",
+  "playCommand": "",
+  "entityTags": [],
+  "layers": [
+    {
+      "definition": "tile",
+      "name": "Ground",
+      "gridSize": {"x": 32, "y": 32},
+      "exportID": "40525976",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": "Mars Ground1"
+    }
+  ],
+  "entities": [],
+  "tilesets": [
+    {"label": "Mars Ground1", "path": "../../images/tile/mars1.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEGSURBVFhHY/xfr/6fgRaAhZ3hp34Iw5ffTAz8768zsDw+A5VABUxQmurgH5cQw9svfxkuX77H8J9XHCqKCQiGwKYbn6AsCPDT4IOyCIM/SrYM/3hEGFgenWZg+vAEKooKaBcFRAKaRQGxYNQBg9sBoBwAw+QCZL3YzMFwALqlsGyHTTMpAKQfWxbGcABIETKGiVEKkM1A9gxJaYDSUIABZMeMFkSjDhh1AFkOAGVHGKYUkOQAZEupUTiBAMXlAMhBxDoGm1qK0wAlloMAXRIhvlCiiwPwhRJdHIAPjDoAwwGwfE4pAJkDw/gARjkA00Bs9qIUYIQAvSyGAaxpgJ6OGOBEyMAAAOk4chYfMa+0AAAAAElFTkSuQmCC", "tileWidth": 32, "tileHeight": 32, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0}
+  ]
+}
