@@ -1,7 +1,7 @@
-# Abdoo_Flixel
-## Why
-- I wanted to make a HaxeFlixel Game.
-## How did you got inspired ?
-### NinjaMuffin99 Dude, Friday Night Funkin'
+# The Martian - Game
+## Inspiration
+ I love this movie, so i wanted to make a game about it, bcuz i think that the mobile game is kinda, umm... Trash.
+ |:
 
-Yeah
+ # DISCLAMER !!!
+ * **I NOT AFFILIATED TO TWENTIETH CENTURY FOX OR TSG THING**
