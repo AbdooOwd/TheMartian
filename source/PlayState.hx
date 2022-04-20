@@ -16,10 +16,11 @@ class PlayState extends FlxState
 	// var quit:FlxText = new FlxText(20, 20, FlxG.width, 'Press ESC to quit', 15);
 	var player:Player;
 
+	var map:FlxOgmo3Loader;
+	var walls:FlxTilemap;
+
 	public var camGame:FlxCamera;
 	public var camHUD:FlxCamera;
-
-	var bg:FlxSprite;
 
 	override function openSubState(SubState:FlxSubState)
 	{
@@ -31,18 +32,30 @@ class PlayState extends FlxState
 		super.closeSubState();
 	}
 
+	function placeEntities(entity:EntityData)
+	{
+		if (entity.name == "player")
+		{
+			player.setPosition(entity.x, entity.y);
+		}
+	}
+
 	override public function create()
 	{
 		FlxG.autoPause = false;
 		FlxG.camera.fade(FlxColor.BLACK, 0.33, true, null, true);
 
 		super.create();
-		player = new Player(600, 600);
 
-		bg = new FlxSprite(600, 300);
-		bg.loadGraphic(Paths.image('fool/haha'));
-		bg.scale.set(4, 4);
-		// bg.scrollFactor.set(1, 1);
+		map = new FlxOgmo3Loader(AssetPaths.mars__ogmo, AssetPaths.mars__json);
+		walls = map.loadTilemap(AssetPaths.tiles__png, "walls");
+		walls.follow();
+		walls.setTileProperties(1, NONE);
+		walls.setTileProperties(2, ANY);
+		add(walls);
+
+		player = new Player();
+		map.loadEntities(placeEntities, "entities");
 
 		camGame = new FlxCamera();
 		FlxG.cameras.reset(camGame);
@@ -56,13 +69,14 @@ class PlayState extends FlxState
 		FlxCamera.defaultCameras = [camGame];
 		camGame.setScrollBoundsRect(0, 0, camGame.width, camGame.height);
 
-		add(bg);
 		add(player);
 	}
 
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+		FlxG.collide(player, walls);
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{

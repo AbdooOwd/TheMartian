@@ -16,6 +16,9 @@ class Player extends FlxSprite
 		loadGraphic(Paths.image('player'), true, 16, 16);
 		drag.x = drag.y = 1600;
 
+		setSize(8, 8);
+		offset.set(4, 4);
+
 		setFacingFlip(LEFT, false, false);
 		setFacingFlip(RIGHT, true, false);
 
